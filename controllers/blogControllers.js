@@ -1,12 +1,12 @@
-const Blog   = require("../models/Blog.js");
+const Blog   = require("../models/blog.js");
 
 
-const getallblog =async (req, res) => {
+const getAllBlog =async (req, res) => {
 
-    const all_blog = await Blog.find({});
+    const allBlog = await Blog.find({});
     res.status(200).json({
         "status": "success",
-        "data": all_blog
+        "data": allBlog
     })
    
 }
@@ -14,10 +14,10 @@ const getallblog =async (req, res) => {
 /*
 
 request.body = {
-    "heading": heading,
-    "body": description,
-    "creator_id": xyz,
-    "tags": "JAVA"
+    heading,
+    body,
+    creator_id
+    tags
 }
 
 1. Create new blog from request body .
@@ -31,27 +31,27 @@ Response :
 
 json = 
 {
-    "message": 'Blog added successfully',
-    "discussion_id": blog._id, //id of blog that is created.
-    "status": 'success'
+    message: 'Blog added successfully',
+    discussion_id: blog._id, //id of blog that is created.
+    status: 'success'
 }
 
 2. Fail to do
 
-404 Status Code
+500 Status Code
 json = 
 {
-    "status": 'fail',
-    "message": error message
+    status: 'fail',
+    message: error message
 }
 
 */
 
 
-const createblog = async (req, res) => {
+const createBlog = async (req, res) => {
 
     //Write your code here.
-   
+
 }
 
-module.exports = { getallblog, createblog };
+module.exports = { getAllBlog, createBlog };
