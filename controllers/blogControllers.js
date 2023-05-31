@@ -32,7 +32,7 @@ Response :
 json = 
 {
     message: 'Blog added successfully',
-    discussion_id: blog._id, //id of blog that is created.
+    blog_id: blog._id, //id of blog that is created.
     status: 'success'
 }
 
